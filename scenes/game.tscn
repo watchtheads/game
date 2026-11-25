@@ -536,4 +536,4 @@ enabled = false
 tile_set = SubResource("TileSet_2ms2v")
 
 [node name="slime" parent="." unique_id=1172771312 instance=ExtResource("7_u5sy4")]
-position = Vector2(-276, 81)
+position = Vector2(-345, 85)
