@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cufci385o641h"]
 
+[ext_resource type="Script" uid="uid://cug7vkhtvf3qk" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://dftrpkfy22rxb" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cmcbjd5n56gt3" path="res://scenes/killzone.tscn" id="2_iywne"]
 [ext_resource type="Texture2D" uid="uid://ts0wh6lwtydg" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://inpwqqh3ytcp" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cjh55qluc2axh" path="res://scenes/platform2.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://n30k8ab5e7bs" path="res://scenes/slime.tscn" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://cv4fafxfx5bji" path="res://assets/sprites/coin.png" id="9_0tnpc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pt2yc"]
 distance = 67.0
@@ -464,6 +466,10 @@ sources/0 = SubResource("TileSetAtlasSource_p57ef")
 
 [node name="Game" type="Node2D" unique_id=1275057247]
 
+[node name="GameManager" type="Node" parent="." unique_id=1996469393]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
 [node name="KILLZONE" parent="." unique_id=254485639 instance=ExtResource("2_iywne")]
 position = Vector2(-19, 157)
 
@@ -475,7 +481,7 @@ shape = SubResource("WorldBoundaryShape2D_pt2yc")
 position = Vector2(-391, 90)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=10176837]
-position = Vector2(0, -5)
+position = Vector2(-1, -5)
 zoom = Vector2(4, 4)
 limit_bottom = 170
 limit_smoothed = true
@@ -580,3 +586,37 @@ scale = Vector2(0.01045, 0.011862967)
 theme_override_colors/font_color = Color(0.42745098, 0.7294118, 0.29411766, 1)
 theme_override_font_sizes/font_size = 1000
 text = "wow u a real pro"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1206258544]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=381050205]
+layout_mode = 3
+anchor_left = 0.016
+anchor_top = 0.03
+anchor_right = 0.336
+anchor_bottom = 0.08
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=209228640]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control" unique_id=91316895]
+position = Vector2(10.567999, 5.5600014)
+scale = Vector2(4.255093, 4.252844)
+texture = ExtResource("9_0tnpc")
+region_enabled = true
+region_rect = Rect2(0, 0, 18, 16)
+
+[node name="scoreboard" type="Label" parent="CanvasLayer/Control" unique_id=546818896]
+layout_mode = 0
+offset_left = 28.568003
+offset_top = -17.439999
+offset_right = 6456.568
+offset_bottom = 1344.56
+scale = Vector2(0.017583637, 0.028454164)
+theme_override_font_sizes/font_size = 1000
+text = "0 coins"

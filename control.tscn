@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ddw8eu16j846s"]
+
+[ext_resource type="Texture2D" uid="uid://cv4fafxfx5bji" path="res://assets/sprites/coin.png" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=1185660609]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="scoreboard" type="Label" parent="." unique_id=1941103931]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -8.0
+offset_right = 6439.0
+offset_bottom = 1354.0
+scale = Vector2(0.0064021163, 0.010156816)
+theme_override_font_sizes/font_size = 1000
+text = "You collected"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2009546759]
+scale = Vector2(2.3599997, 2.2)
+texture = ExtResource("1_0fbet")
+region_enabled = true
+region_rect = Rect2(0, 0, 18, 16)
