@@ -522,10 +522,10 @@ position = Vector2(514, 40)
 libraries/ = SubResource("AnimationLibrary_iywne")
 autoplay = &"move"
 
-[node name="Platform2" parent="." unique_id=517680725 instance=ExtResource("6_p57ef")]
+[node name="Platform2" parent="Platforms" unique_id=517680725 instance=ExtResource("6_p57ef")]
 position = Vector2(1107, 73)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2" unique_id=27464574]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2" unique_id=27464574]
 libraries/ = SubResource("AnimationLibrary_0tnpc")
 autoplay = &"up"
 
@@ -537,3 +537,46 @@ tile_set = SubResource("TileSet_2ms2v")
 
 [node name="slime" parent="." unique_id=1172771312 instance=ExtResource("7_u5sy4")]
 position = Vector2(-345, 85)
+
+[node name="Labels" type="Node" parent="." unique_id=1465904834]
+
+[node name="Label" type="Label" parent="Labels" unique_id=2097651976]
+offset_left = -372.0
+offset_top = 46.999992
+offset_right = 15115.0
+offset_bottom = 1409.0
+scale = Vector2(0.01045, 0.011862967)
+theme_override_colors/font_color = Color(0.42745098, 0.7294118, 0.29411766, 1)
+theme_override_font_sizes/font_size = 1000
+text = "dont touch this green diddyblud"
+
+[node name="Label2" type="Label" parent="Labels" unique_id=47057363]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 15532.0
+offset_bottom = 2773.0
+scale = Vector2(0.01045, 0.011862967)
+theme_override_colors/font_color = Color(0.42745098, 0.7294118, 0.29411766, 1)
+theme_override_font_sizes/font_size = 1000
+text = "ouu shii its a coin
+"
+
+[node name="Label3" type="Label" parent="Labels" unique_id=2017035453]
+offset_left = 463.0
+offset_top = -24.0
+offset_right = 15950.0
+offset_bottom = 2703.0
+scale = Vector2(0.01045, 0.011862967)
+theme_override_colors/font_color = Color(0.42745098, 0.7294118, 0.29411766, 1)
+theme_override_font_sizes/font_size = 1000
+text = "wait for the platform"
+
+[node name="Label4" type="Label" parent="Labels" unique_id=379345967]
+offset_left = 855.0
+offset_top = -227.0
+offset_right = 16342.0
+offset_bottom = 2500.0
+scale = Vector2(0.01045, 0.011862967)
+theme_override_colors/font_color = Color(0.42745098, 0.7294118, 0.29411766, 1)
+theme_override_font_sizes/font_size = 1000
+text = "wow u a real pro"
